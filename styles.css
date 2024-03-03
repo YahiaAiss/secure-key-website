@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@keyframes slide-in {
 
+    from{
+        transform: translateX(-600px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 body {
     min-height: 150vh;
     background-color: black; 
@@ -21,12 +32,17 @@ ul.navlinks li{
     width: 100%;
     
 }
+.navbarcontainer{
+    background-color:black;
+    
+}
 nav.navbar{
     display: flex;
     height:min-content;
     margin-left: 30px;
     margin-right: 50px;
     list-style: none;
+    
 }
 ul.navlinks{
     display: flex;
@@ -48,34 +64,61 @@ ul button{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+button.Get-the-app{
+    background-color: #5E32D1;
+    height: 40px;
+    width: 200px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: slide-in 0.6s ease 0.1S; 
+    animation-fill-mode: backwards;
+}
+.buttons{
+    justify-content: center;
+
+}
 .logo{
-    height: fit-content;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 550;
     min-width:  180px;
-    display: flex;
-    margin-top: 15px;
+    margin-top: 20px;
+}
+.logo img{
+    height: 30px;
+    margin-right: 8px;
+    
 }
 .logo a{
     transition: all 0.5s ease;
+    display: flex;
 }
-
+.buttons{
+    display: flex;
+    
+}
 li.navlink{
     font-size: 17px;
     font-weight: 300;
 }
 
 .Description-container{
-    color: white;
-    text-align: center;
-    font-size: 45px;
-    line-height: 70px;
     width: 100%;
-    position: absolute;
+    margin-top: 100px;
     font-family: 'montserrat';
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
     font-weight:0 ;
-    top: 200px;
+    color: white;
+    animation: slide-in 0.6s ease; 
 }
+
 button:hover{
     background-color: transparent;
     border: 1px solid #5E32D1; 
@@ -91,7 +134,6 @@ li.navlink a:hover{
 }
 .logo a:hover{
     color: #5E32D1;
-    
 }
 
     
